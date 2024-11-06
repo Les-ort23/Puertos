@@ -1,0 +1,79 @@
+using System;
+using System.ComponentModel;
+
+public class HelloWorld
+{
+    public enum Propiedades{
+        [Description("Expresion regular")]
+        puerto1 = 8980,
+        [Description("Calculadora Basica")]
+        puerto2 = 8981,
+        [Description("Ingreso de un registro")]
+        puerto3 = 8982,
+        puerto4 = 8983,
+        puerto5 = 8984,
+        puerto6 = 8985,
+        puerto7 = 8986,
+        puerto8 = 8987,
+        puerto9 = 8988,
+        puerto10 = 8989,
+        puerto11 = 8990,
+    }
+    public static void Main(String []args)
+    {
+        Console.WriteLine ("Ingresar un puerto");
+        Console.WriteLine ("En el rango de 8980-8990");
+        int puertos = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine(puertos);
+        switch((Propiedades)puertos)
+        {
+            case Propiedades.puerto1:
+            Console.WriteLine ("puerto 8980,Expresion regular");
+            break;
+            
+            case Propiedades.puerto2:
+                Console.WriteLine("puerto 8981, Calculadora Basica");
+                break;
+
+            case Propiedades.puerto3:
+                Console.WriteLine("puerto 8982, Ingreso de un registro");
+                break;
+
+            case Propiedades.puerto4:
+                Console.WriteLine("puerto 8983");
+                break;
+
+            case Propiedades.puerto5:
+                Console.WriteLine("puerto 8984");
+                break;
+
+            case Propiedades.puerto6:
+                Console.WriteLine("puerto 8985");
+                break;
+
+            case Propiedades.puerto7:
+                Console.WriteLine("puerto 8986");
+                break;
+
+            case Propiedades.puerto8:
+                Console.WriteLine("puerto 8987");
+                break;
+
+            case Propiedades.puerto9:
+                Console.WriteLine("puerto 8988");
+                break;
+
+            case Propiedades.puerto10:
+                Console.WriteLine("puerto 8989");
+                break;
+
+            case Propiedades.puerto11:
+                Console.WriteLine("puerto 8990");
+                break;
+
+            default:
+                Console.WriteLine("Puerto no reconocido.");
+                break;
+        }
+        
+    }
